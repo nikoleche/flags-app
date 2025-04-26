@@ -3,7 +3,7 @@ flags-app is a simple application based on HTML, CSS, and JavaScript. The applic
 
 ## Initial Setup
 
-Download the repository and start a local server using Live Server in Visual Studio Code.
+Download the repository and open the root folder using Visual Studio Code, then access index.html in the browser.
 
 A live demo is also available at:
 
@@ -27,6 +27,12 @@ GET
 ``
 countryName - returns a JSON with the data of the country inserted in the input field.
 ``
-
+## **Features**
+``
+<ul>
+<li>**Search** for country flags using the REST Countries API</li>
+<li>**Error handling** for invalid, blank or duplicate inputs</li>
+<li>**Reset** button to clear output</li>
+</ul>
 
 
