@@ -25,14 +25,14 @@ GET
 ``
 ## **URL Parameter**
 ``
-countryName - returns a JSON with the data of the country inserted in the input field.
+${countryName} returns a JSON with the data of the country inserted in the input field.
 ``
 ## **Features**
-``
+
 <ul>
-<li>**Search** for country flags using the REST Countries API</li>
-<li>**Error handling** for invalid, blank or duplicate inputs</li>
-<li>**Reset** button to clear output</li>
+<li>Search for country flags using the REST Countries API</li>
+<li>Error handling for invalid, blank, or duplicate inputs, as well as API response errors</li>
+<li>Reset button to clear previous results and start a new search</li>
 </ul>
 
 
