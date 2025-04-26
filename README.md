@@ -1,9 +1,3 @@
-## Navigation
-
-1. [Introduction](#introduction)
-2. [Initial Setup](#initial-setup)
-3. [APIs](#apis)
-
 ## Summary
 flags-app is a simple application based on HTML, CSS, and JavaScript. The application makes calls to the REST Countries API and saves the flags of visited countries. After that, it calculates the amount of countries visited. 
 
@@ -21,15 +15,15 @@ https://webstoner.com/flags-app
 
 This application makes calls to the REST Countries external API.
 
-**Endpoint**
+### **Endpoint**
 ``
 https://restcountries.com/v3.1/name/${countryName}
 ``
-**Method**
+### **Method**
 ``
 GET
 ``
-**URL Parameter**
+## **URL Parameter**
 ``
 countryName - returns a JSON with the data of the country inserted in the input field.
 ``
