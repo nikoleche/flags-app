@@ -70,6 +70,7 @@ button:hover {
 .search {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -83,11 +84,13 @@ button:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
 }
 
 #search-input {
   height: 50px;
-  width: 900px;
+  width: 100%;
+  max-width: 900px;
   border-radius: 8px;
   padding: 0 20px;
 }
@@ -108,19 +111,33 @@ button:hover {
   margin-top: 100px;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
 
+.visited-countries {
+  width: 100%;
+}
+
 .visited-content {
   height: 200px;
-  width: 1000px;
+  width: 100%;
+  max-width: 1000px;
+  min-width: 0;
   background: #ffffff;
   border-radius: 8px;
   border: 2px solid #000000;
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
+}
+
+.visited-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  width: 100%;
 }
 
 /* FLAGS */
@@ -155,4 +172,22 @@ button:hover {
 
 #resetBtn:hover {
   background: rgb(94, 111, 141);
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 1050px) {
+  .search-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #addBtn {
+    margin-top: 5px;
+  }
+
+  .outputData {
+    align-items: flex-start;
+  }
 }
