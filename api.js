@@ -17,7 +17,7 @@ let totalFlags = 0;
 
 // API REQUESTS
 
-addBtn.addEventListener("click", async () => {
+async function addFlag() {
   const countryName = searchInput.value.trim().toLowerCase();
 
   if (!countryName) {
@@ -66,6 +66,17 @@ addBtn.addEventListener("click", async () => {
     searchInput.value = "";
   } catch (error) {
     console.error("API Error", error);
+  }
+}
+
+addBtn.addEventListener("click", addFlag);
+
+// ENTER KEY
+
+searchInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    addFlag();
   }
 });
 
