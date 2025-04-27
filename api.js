@@ -1,9 +1,9 @@
-const visitedContent = document.getElementById("visited-content");
+const flagsContent = document.getElementById("visited-content");
 const initialMsg = document.createElement("p");
 
 initialMsg.textContent =
   "You haven't added any countries yet. Start adding them using the search bar.";
-visitedContent.appendChild(initialMsg);
+flagsContent.appendChild(initialMsg);
 
 const addBtn = document.getElementById("addBtn");
 const searchInput = document.getElementById("search-input");
@@ -42,7 +42,7 @@ async function addFlag() {
     const countryFlag = data[0].flags.png;
 
     // CHECK IF THE FLAG ALREADY EXISTS
-    const addedFlags = [...visitedContent.querySelectorAll("img")].some(
+    const addedFlags = [...flagsContent.querySelectorAll("img")].some(
       (img) => img.alt === countryName
     );
 
@@ -52,7 +52,7 @@ async function addFlag() {
       flagImg.classList.add("flag");
       flagImg.src = countryFlag;
       flagImg.alt = countryName;
-      visitedContent.appendChild(flagImg);
+      flagsContent.appendChild(flagImg);
       totalFlags += 1;
     } else {
       alert(
@@ -100,16 +100,22 @@ submitBtn.addEventListener("click", () => {
 
   output.appendChild(outputFlags);
   output.appendChild(outputTotal);
+
+  // SCROLL
+  output.scrollIntoView({
+    behavior: "smooth",
+    block: "center",
+  });
 });
 
 // RESET FORM
 
 resetBtn.addEventListener("click", () => {
-  visitedContent.innerHTML = "";
+  flagsContent.innerHTML = "";
   output.innerHTML = "";
   totalFlags = 0;
 
   initialMsg.textContent =
     "You haven't added any countries yet. Start adding them using the search bar.";
-  visitedContent.appendChild(initialMsg);
+  flagsContent.appendChild(initialMsg);
 });
