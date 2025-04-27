@@ -100,6 +100,7 @@ button:hover {
   border-radius: 8px;
   padding: 0 20px;
   border: 2px solid #000000;
+  opacity: 0.9;
 }
 
 #search-input::placeholder {
@@ -126,7 +127,7 @@ button:hover {
 .visited-countries {
   max-width: 1000px;
   width: 100%;
-  color: #ffffff;
+  opacity: 0.9;
   display: flex;
   flex-direction: column;
 }
@@ -188,6 +189,10 @@ button:hover {
 /* MOBILE */
 
 @media screen and (max-width: 1050px) {
+  #search-input {
+    font-size: 16px;
+  }
+
   .search-content {
     display: flex;
     flex-direction: column;
