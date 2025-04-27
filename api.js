@@ -97,4 +97,8 @@ resetBtn.addEventListener("click", () => {
   visitedContent.innerHTML = "";
   output.innerHTML = "";
   totalFlags = 0;
+
+  initialMsg.textContent =
+    "You haven't added any countries yet. Start adding them using the search bar.";
+  visitedContent.appendChild(initialMsg);
 });
