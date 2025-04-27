@@ -3,7 +3,7 @@ flags-app is a simple application based on HTML, CSS, and JavaScript. The applic
 
 ## Initial Setup
 
-Download the repository and open the root folder using Visual Studio Code, then access index.html in the browser.
+Download the repository and open the root folder using Visual Studio Code, then start Live Server or access index.html in the browser.
 
 A live demo is also available at:
 
