@@ -90,6 +90,12 @@ submitBtn.addEventListener("click", () => {
   const outputTotal = document.createElement("h2");
   const worldTotal = ((totalFlags / 195) * 100).toFixed(1);
 
+  // SCROLL
+  output.scrollIntoView({
+    behavior: "smooth",
+    block: "center",
+  });
+
   if (totalFlags === 1) {
     outputFlags.textContent = `You have visited 1 country.`;
   } else if (totalFlags > 1) {
